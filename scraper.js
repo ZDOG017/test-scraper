@@ -1,11 +1,7 @@
 const puppeteer = require('puppeteer');
 
 const scrapeKaspi = async () => {
-  const browserFetcher = puppeteer.createBrowserFetcher();
-  const revisionInfo = await browserFetcher.download('126.0.6478.182');
-  const browser = await puppeteer.launch({ 
-    executablePath: revisionInfo.executablePath,
-    headless: false,
+  const browser = await puppeteer.launch({ headless: false,
     args: ['--no-sandbox', '--disable-setuid-sandbox']  
    }); // Set to true for headless mode
   const page = await browser.newPage();
