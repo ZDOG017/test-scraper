@@ -2,9 +2,6 @@
 
 echo 'Preparing to run automation on production mode.'
 
-cd ./node_modules/puppeteer
-npm install
-
 puppeteer_cache_dir=".cache/puppeteer/chrome/"
 puppeteer_dep_dir="node_modules/puppeteer/"
 
